@@ -37,7 +37,7 @@ ChatGPT非常适合进行日常的通用问答，但在需要领域特定知识�
 2. 修仙问答
 ![xx1](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian1.png)
 ![xx2](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian2.png)
-![xx3](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian2.png)
+![xx3](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian3.png)
 
 
 [体验地址](http://ai.itrunner.cn:3000/)
