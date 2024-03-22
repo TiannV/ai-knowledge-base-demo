@@ -40,7 +40,7 @@ ChatGPT非常适合进行日常的通用问答，但在需要领域特定知识�
 ![xx3](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian3.png)
 
 
-[体验地址](http://ai.itrunner.cn:3000/)
+[体验地址](http://ai.itrunner.cn:3002/)
 ## 入门指南
 
 以下设置指南假定您至少对使用React和Next.js开发Web应用程序有基本的了解。熟悉OpenAI API和Supabase会对使事情正常运行有所帮助，但不是必需的。
