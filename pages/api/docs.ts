@@ -56,6 +56,10 @@ const handler = async (req: Request): Promise<Response> => {
     }
   );
 
+  if (!embeddingResponse.ok) {
+     return new Response("user quota is not enough");
+  }
+
   const embeddingData = await embeddingResponse.json();
   const [{ embedding }] = embeddingData.data;
   const { data: documents, error } = await supabaseClient.rpc(
@@ -67,7 +71,10 @@ const handler = async (req: Request): Promise<Response> => {
     }
   );
 
-  if (error) console.error(error);
+  if (error) {
+  console.error(error);
+  return new Response("supabase" + error.message);
+  }
 
   const tokenizer = new GPT3Tokenizer({ type: "gpt3" });
   let tokenCount = 0;
@@ -85,7 +92,7 @@ const handler = async (req: Request): Promise<Response> => {
       tokenCount += encoded.text.length;
 
       // Limit context to max 1500 tokens (configurable)
-      if (tokenCount > 1500) {
+      if (tokenCount > 5000) {
         break;
       }
 

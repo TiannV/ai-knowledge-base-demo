@@ -12,7 +12,6 @@ import { ReactNode } from "react";
 import { PageMeta } from "../types";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 
-
 interface Props {
   children: ReactNode;
   meta?: PageMeta;
@@ -35,6 +34,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
 
     setAanswer("");
     setLoading(true);
+
     const response = await fetch("/api/docs", {
       method: "POST",
       headers: {
@@ -45,8 +45,9 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
       })
     });
     console.log("Edge function returned.");
-
+    
     if (!response.ok) {
+      console.log(response);
       throw new Error(response.statusText);
     }
 
@@ -75,7 +76,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
     <>
       <MetaTags
         title="ai-answerbot"
-        description="个人知识库"
+        description="修仙百科"
         cardImage="/bot/docs-og.png"
         url=""
       />
@@ -84,7 +85,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
 
         <main className="flex flex-col items-center justify-center flex-1 w-full min-h-screen px-4 py-2 mx-auto mt-12 text-center sm:mt-20">
           <h1 className="max-w-xl text-2xl font-bold sm:text-4xl">
-            问我任何一个您个人知识库的 <sup>*</sup>  问题
+              修仙百科
           </h1>
           <div className="w-full max-w-xl">
             <textarea
@@ -100,7 +101,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                 className="w-full px-4 py-2 mt-2 font-mediu btn btn-primary"
                 onClick={(e) => generateAnswer(e)}
               >
-                输入您的问题 &rarr;
+                输入修仙迷惑 &rarr;
               </button>
             )}
             {loading && (
@@ -123,7 +124,7 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                   <>
                     <div>
                       <h2 className="mx-auto text-3xl font-bold sm:text-4xl">
-                        这是我的回答:{" "}
+                        百科回答:{" "}
                       </h2>
                     </div>
                       {answer.split("SOURCES:").map((splitanswer, index) => {
@@ -134,14 +135,6 @@ const DocsPage: NextPage<Props> = ({ children, meta: pageMeta }: Props) => {
                                 ? "hover:border-accent-focus cursor-copy text-left"
                                 : ""
                             }`}
-                            onClick={() => {
-                              if (index === 0) {
-                                navigator.clipboard.writeText(splitanswer);
-                                toast("Copied to clipboard!", {
-                                  icon: "✂️"
-                                });
-                              }
-                            }}
                             key={index}
                           >
                             {index === 0 ? (
