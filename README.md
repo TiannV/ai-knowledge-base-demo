@@ -47,7 +47,7 @@ ChatGPT非常适合进行日常的通用问答，但在需要领域特定知识�
 
 ### 设置Supabase
 1. 登录[MemFire](https://cloud.memfiredb.com/auth/login?from=1HdvKv&utm_source=github) 创建应用
-![yy1](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/xiuxian2.png)
+![yy1](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/yy1.png)
 
 2. 启用Vector扩展
  首先，我们将启用Vector扩展。可以在应用的SQL执行器中运行以下命令完成此操作：
@@ -102,7 +102,7 @@ end;
 $$;
 
 ```
-![yy4](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/yy3.png)
+![yy4](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/yy4.png)
 
 ### 设置本地环境
 
@@ -118,7 +118,7 @@ cp .env.local.example .env.local
 ```
 
 - 打开`.env.local`文件，添加您的Supabase项目URL和API密钥。
-![yy5](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/yy3.png)
+![yy5](https://cnnbrba5g6haaugeu530.baseapi.memfiredb.com/storage/v1/object/public/xiuxian/yy5.png)
 - 将您的OpenAI API密钥添加到`.env.local`文件。您可以在OpenAI Web门户的`API Keys`下找到它。API密钥应存储在`OPENAI_API_KEY`变量中。
 - [可选]提供`OPEAI_PROXY`环境变量以启用您自定义的OpenAI API代理。将其设置为 `""` 以直接调用官方API。
 - 启动应用程序
